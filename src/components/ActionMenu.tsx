@@ -51,15 +51,15 @@ function getActionOptions(dir: DirectoryInfo): ActionOption[] {
     case 'only-claude':
       options.push(
         {
-          type: 'create-agents-from-claude',
-          label: 'Move content to AGENTS.md',
-          description: 'Move CLAUDE.md content to AGENTS.md and add sourcing',
-          recommended: true,
-        },
-        {
           type: 'create-agents-empty',
           label: 'Create empty AGENTS.md',
           description: 'Create empty AGENTS.md, add @AGENTS.md to CLAUDE.md',
+          recommended: true,
+        },
+        {
+          type: 'create-agents-from-claude',
+          label: 'Move content to AGENTS.md',
+          description: 'Move CLAUDE.md content to AGENTS.md and add sourcing',
         },
         {
           type: 'do-nothing',
