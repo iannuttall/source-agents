@@ -1,0 +1,45 @@
+{
+  "name": "source-agents",
+  "version": "1.0.0",
+  "description": "TUI for managing CLAUDE.md and AGENTS.md files with intelligent sourcing",
+  "main": "dist/cli.js",
+  "type": "module",
+  "bin": {
+    "source-agents": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "bun build src/cli.tsx --outdir dist --target node --format esm --external react --external ink --external ink-spinner --external commander --external fast-glob --external fs-extra",
+    "dev": "bun run src/cli.tsx",
+    "start": "node dist/cli.js",
+    "type-check": "tsc --noEmit",
+    "link": "npm link"
+  },
+  "keywords": [
+    "claude",
+    "agents",
+    "tui",
+    "cli",
+    "markdown",
+    "source"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "ink": "^5.0.1",
+    "ink-spinner": "^5.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
